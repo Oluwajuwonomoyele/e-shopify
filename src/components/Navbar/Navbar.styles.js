@@ -6,7 +6,7 @@ export const NavContainer = styled.section`
 export const NavWrapper = styled.div`
     max-width: 1400px;
     margin: 0 auto;
-    padding: 10px 20px;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
