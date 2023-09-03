@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import Announcement from './components/Announcement';
 import Footer from './components/Footer';
@@ -14,7 +15,7 @@ function App() {
     <>
       <Announcement />
       <Navbar />
-      <Cart />
+      <Home />
       <Footer />
     </>
   );
