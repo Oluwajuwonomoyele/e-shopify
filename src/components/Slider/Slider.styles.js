@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { mobile } from "../../responsive";
 
 export const SliderSection = styled.section`
     width: 100%;
@@ -6,6 +7,10 @@ export const SliderSection = styled.section`
     display: flex;
     position: relative;
     overflow: hidden;
+
+    ${mobile({
+        display: 'none'
+    })}
 `
 export const Arrow = styled.div`
     width: 50px;

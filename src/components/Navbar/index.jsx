@@ -8,7 +8,7 @@ const Navbar = () => {
                 <Left>
                     <Lang>EN</Lang>
                     <Search>
-                        <input type="text" />
+                        <input type="text" placeholder="Search" aria-label="text" />
                         <AiOutlineSearch />
                     </Search>
                 </Left>

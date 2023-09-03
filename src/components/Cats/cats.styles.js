@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import {mobile} from '../../responsive';
 
 export const CatsContainer = styled.section`
 
@@ -10,6 +11,11 @@ export const CatsSection = styled.div`
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+
+    ${mobile({
+        padding: '1rem',
+        flexDirection: 'column'
+    })}
 `
 
 export const CatItemContainer = styled.div`
@@ -21,6 +27,10 @@ export const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    ${mobile({
+        height: '40vh'
+    })}
 `
 export const Info = styled.div`
     position: absolute;
@@ -38,6 +48,10 @@ export const Title = styled.h1`
     color: white;
     text-transform: uppercase;
     font-size: 35px;
+
+    ${mobile({
+        textAlign: 'center'
+    })}
 `
 export const Button = styled.button`
     border: none;
