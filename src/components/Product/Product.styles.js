@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {mobile} from '../../responsive'
 
 
 export const ProductSection = styled.section`
@@ -13,6 +14,10 @@ export const ProductContainer = styled.div`
     padding: 1rem 2rem;
     max-width: 1400px;
     margin: 0 auto;
+
+    ${mobile({
+        padding: '1rem'
+    })}
 `
 
 

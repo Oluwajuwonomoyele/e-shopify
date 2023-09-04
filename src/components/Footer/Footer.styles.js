@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
+import {mobile} from '../../responsive';
 
 export const FooterSection = styled.footer`
-
 `
 export const Wrapper = styled.div`
     max-width: 1400px;
@@ -11,6 +11,12 @@ export const Wrapper = styled.div`
     justify-content: center;
     align-items: flex-start;
     gap: 3rem;
+
+    ${mobile({
+        flexDirection: 'column',
+        justifyContent: 'center',
+        padding: '1rem'
+    })}
 `
 export const Left = styled.div`
     flex: 1;
@@ -18,12 +24,15 @@ export const Left = styled.div`
     flex-direction: column;
     gap: 1rem;
 
+    ${mobile({
+        justifyContent: 'center',
+    })}
 `
 export const Logo = styled.h1`
-    
+
 `
 export const Desc = styled.p`
-
+    
 `
 export const SocialContainer = styled.div`
     display: flex;
@@ -58,6 +67,7 @@ export const List = styled.ul`
 `
 export const ListItem = styled.li`
     width: 50%;
+
 `
 
 export const Right = styled.div`
