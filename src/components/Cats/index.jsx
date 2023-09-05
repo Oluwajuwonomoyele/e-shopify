@@ -7,7 +7,7 @@ const Cats = () => {
         <CatsContainer>
            <CatsSection>
             { categories.map(cat => (
-                    <CatItem cat={cat} />
+                    <CatItem cat={cat} key={cat.id} />
             ))}
            </CatsSection>
         </CatsContainer>

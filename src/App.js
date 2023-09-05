@@ -9,10 +9,12 @@ import Login from './pages/Login';
 import ProductList from './pages/ProductList';
 import Products from './pages/Products';
 import Register from './pages/Register';
+import MobileNav from './components/MobileNav';
 
 function App() {
   return (
     <>
+      <MobileNav />
       <Announcement />
       <Navbar />
       <Home />

@@ -15,10 +15,19 @@ export const NavWrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 100%;
 
     ${mobile({
-        padding: '1rem'
+        padding: '0 2rem'
     })}
+`
+export const Hamburger = styled.div`
+    flex: 1;
+    cursor: pointer;
+
+    @media screen and (min-width: 426px) {
+        display: none;
+    }
 `
 export const Left = styled.div`
     flex: 1;
@@ -63,8 +72,7 @@ export const Logo = styled.h1`
     cursor: pointer;
 
     ${mobile({
-        fontSize: '24px',
-        textAlign: 'left'
+        fontSize: '22px',
     })}
 `
 export const Right = styled.div`
@@ -73,16 +81,22 @@ export const Right = styled.div`
     align-items: center;
     justify-content: flex-end;
     gap: 25px;
-
-    ${mobile({
-        justifyContent: 'center',
-        gap: '10px',
-    })}
 `
 export const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer;
     text-transform: uppercase;
+
+    &:nth-child(1){
+        ${mobile({
+            display: 'none'
+        })}
+    }
+    &:nth-child(2){
+        ${mobile({
+            display: 'none'
+        })}
+    }
 `
 export const Cart = styled.div`
     position: relative;

@@ -1,10 +1,14 @@
-import { NavContainer, NavWrapper, Left, Center, Right, Lang, Search, Logo, MenuItem, Cart, Badge } from "./Navbar.styles";
-import {AiOutlineSearch, AiOutlineShoppingCart} from 'react-icons/ai'
+import { NavContainer, NavWrapper, Hamburger, Left, Center, Right, Lang, Search, Logo, MenuItem, Cart, Badge } from "./Navbar.styles";
+import {AiOutlineSearch, AiOutlineShoppingCart} from 'react-icons/ai';
+import {HiOutlineMenu} from 'react-icons/hi';
 
 const Navbar = () => {
     return ( 
         <NavContainer>
             <NavWrapper>
+                <Hamburger>
+                    <HiOutlineMenu size={30}/>
+                </Hamburger>
                 <Left>
                     <Lang>EN</Lang>
                     <Search>
