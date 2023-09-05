@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { mobile } from "../responsive";
 import bg from '../assets/loginbg.jpg';
 
 const LoginSection = styled.section`
@@ -11,11 +12,20 @@ const LoginSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    ${mobile({
+        backgroundSize: 'cover',
+        backgroundPosition: '60% 0'
+    })}
 `
 const Container = styled.div`
     width: 35%;
     padding: 2rem;
     background-color: white;
+
+    ${mobile({
+        width: '85%'
+    })}
 `
 const Title = styled.h1`
     font-size: 32px;
@@ -34,14 +44,19 @@ const Input = styled.input`
     min-width: 40%;
     width: 100%;
     padding: 10px;
+
+    ${mobile({
+        flex: 'none'
+    })}
 `
 const Button = styled.button`
     width: 40%;
     border: none;
-    padding: 15px 20px;
+    padding: 1rem 2rem;
     background-color: teal;
     color: white;
     cursor: pointer;
+    outline: none;
 `
 const Link = styled.div`
     margin-top: 10px;
@@ -52,6 +67,11 @@ const Link = styled.div`
         text-decoration: underline;
         cursor: pointer;
     }
+
+    ${mobile({
+        textAlign: 'left',
+        marginTop: '1rem'
+    })}
 `
 
 const Login = () => {
@@ -61,8 +81,8 @@ const Login = () => {
                 <Title>Sign In</Title>
 
                 <Form action='#'>
-                    <Input placeholder="Username or Email Address" />
-                    <Input placeholder="Password" />
+                    <Input placeholder="Username or Email Address" aria-label="username" />
+                    <Input placeholder="Password" aria-label="password" />
                     <Button>Log In</Button>
                 </Form>
 

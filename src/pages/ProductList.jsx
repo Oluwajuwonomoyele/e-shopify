@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 import Newsletter from "../components/Newsletter";
 import Product from "../components/Product";
+import { mobile } from "../responsive";
 
 const ProductListSection = styled.section`
 
@@ -21,15 +22,29 @@ const FilterContainer = styled.div`
 
 const Filter = styled.div`
     padding: 1.2rem 0;
+
+    ${mobile({
+        display: 'flex',
+        flexDirection: 'column'
+    })}
 `
 const FilterText = styled.span`
     font-size: 1.2rem;
     font-weight: 600;
+
+    ${mobile({
+        fontSize: '1.1rem',
+        marginBottom: '0.5rem'
+    })}
 `
 const Select = styled.select`
     padding: 0.5rem;
     margin: 0 0.6rem;
     cursor: pointer;
+
+    ${mobile({
+        margin: '0.6rem 0'
+    })}
 `
 const Option = styled.option`
     padding: 0.5rem;

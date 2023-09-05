@@ -1,4 +1,5 @@
 import { styled } from "styled-components";
+import { mobile } from "../responsive";
 import bg from '../assets/registerbg.jpg';
 
 const RegisterSection = styled.section`
@@ -11,16 +12,28 @@ const RegisterSection = styled.section`
     display: flex;
     justify-content: center;
     align-items: center;
+
+    ${mobile({
+        backgroundSize: 'cover'
+    })}
 `
 const Container = styled.div`
     width: 40%;
     padding: 2rem;
     background-color: white;
+
+    ${mobile({
+        width: '85%'
+    })}
 `
 const Title = styled.h1`
     font-size: 32px;
     font-weight: 300;
     text-transform: uppercase;
+
+    ${mobile({
+        fontSize: '2rem'
+    })}
 
 `
 const Form = styled.form`
@@ -39,14 +52,19 @@ const Input = styled.input`
 const Agreement = styled.span`
     font-size: 18px;
     margin: 10px 0;
+
+    ${mobile({
+        fontSize: '1rem'
+    })}
 `
 const Button = styled.button`
     width: 40%;
     border: none;
-    padding: 15px 20px;
+    padding: 1rem 2rem;
     background-color: teal;
     color: white;
     cursor: pointer;
+    outline: none;
 `
 
 const Register = () => {

@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
-import Newsletter from "../components/Newsletter";
 import { BiMinus } from 'react-icons/bi';
 import { AiOutlinePlus } from 'react-icons/ai';
+import { mobile } from "../responsive";
 
 const ProductsSection = styled.section`
     
@@ -12,6 +12,12 @@ const ProductsWrapper = styled.div`
     padding: 1rem 2rem;
     display: flex;
     gap: 4rem;
+
+    ${mobile({
+        padding: '1.5rem',
+        flexDirection: 'column',
+        gap: '1rem'
+    })}
 `
 const ImageContainer = styled.div`
     flex: 1;
@@ -20,6 +26,10 @@ const Image = styled.img`
     width: 100%;
     height: 90vh;
     object-fit: cover;
+
+    ${mobile({
+        height: '40vh'
+    })}
 `
 const InfoContainer = styled.div`
     flex: 1;
@@ -40,6 +50,10 @@ const FilterContainer = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: 30px;
+    
+    ${mobile({
+        width: '100%'
+    })}
 
 `
 const FilterOne = styled.div`
@@ -82,6 +96,10 @@ const AddContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     margin-top: 30px;
+
+    ${mobile({
+        width: '100%'
+    })}
 `
 const AmountContainer = styled.div`
     display: flex;
@@ -158,7 +176,6 @@ const Products = () => {
                     </AddContainer>
                 </InfoContainer>
             </ProductsWrapper>
-            <Newsletter />
         </ProductsSection>
     );
 }

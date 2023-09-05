@@ -2,11 +2,16 @@ import { styled } from "styled-components";
 import {mobile} from '../../responsive';
 
 export const NavContainer = styled.section`
+    background: white;
     height: 60px;
+    transition: all 0.5s ease;
+    position: ${(props) => props.openNav ? 'absolute' : ''};
+    width: ${(props) => props.openNav ? '100%' : ''};
+    top: ${(props) => props.openNav ? '0' : ''};
+    left: ${(props) => props.openNav ? '0' : ''};
+    z-index: 30;
 
-    ${mobile({
-        height: '50px'
-    })}
+
 `
 export const NavWrapper = styled.div`
     max-width: 1400px;
@@ -18,15 +23,35 @@ export const NavWrapper = styled.div`
     height: 100%;
 
     ${mobile({
-        padding: '0 2rem'
+        padding: '0 1.5rem'
     })}
 `
 export const Hamburger = styled.div`
     flex: 1;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
 
     @media screen and (min-width: 426px) {
         display: none;
+    }
+`
+export const Line = styled.div`
+    width: 1.9rem;
+    height: 3px;
+    background-color: black;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+
+    &:nth-child(1){
+        transform: ${(props) => props.openNav ? 'rotate(45deg) translateY(0.8rem)' : ''}
+    }
+    &:nth-child(2){
+        opacity: ${(props) => props.openNav ? '0' : '1'}
+    }
+    &:nth-child(3){
+        transform: ${(props) => props.openNav ? 'rotate(-45deg) translateY(-0.8rem)' : ''}
     }
 `
 export const Left = styled.div`
@@ -65,10 +90,15 @@ export const Search = styled.div`
 `
 export const Center = styled.div`
     flex: 1;
+
+    ${mobile({
+      flex: '2'
+    })}
 `
 export const Logo = styled.h1`
     font-weight: bold;
     text-align: center;
+    text-transform: uppercase;
     cursor: pointer;
 
     ${mobile({
@@ -100,6 +130,7 @@ export const MenuItem = styled.div`
 `
 export const Cart = styled.div`
     position: relative;
+    cursor: pointer;
 `
 export const Badge = styled.div`
     background-color: blue;
@@ -109,4 +140,5 @@ export const Badge = styled.div`
     right: -20%;
     top: -20%;
     color: white;
+    display: none;
 `

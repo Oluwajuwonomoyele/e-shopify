@@ -1,5 +1,6 @@
 import { styled } from 'styled-components';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
+import { mobile } from '../responsive';
 
 const CartSection = styled.section``
 
@@ -7,12 +8,20 @@ const Container = styled.div`
   max-width: 1400px;
   margin: 0 auto;
   padding: 1rem 2rem;
+
+  ${mobile({
+      padding: '1.5rem'
+  })}
 `
 const Title = styled.h1`
   font-weight: 300;
   font-size: 2rem;
   text-align: center;
   text-transform: uppercase;
+
+  ${mobile({
+    marginBottom: '1rem'
+  })}
 `
 const Top = styled.div`
   display: flex;
@@ -32,6 +41,10 @@ const TopTexts = styled.div`
   display: flex;
   align-items: center;
   gap: 0.6rem;
+
+  ${mobile({
+      display: 'none'
+  })}
 `
 const TopText = styled.span`
   text-decoration: underline;
@@ -41,6 +54,11 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 2rem;
+
+  ${mobile({
+    flexDirection: 'column',
+    gap: '2rem',
+  })}
 `
 const Info = styled.div`
   flex: 3;
@@ -52,6 +70,10 @@ const Info = styled.div`
 const Product = styled.div`
   display: flex;
   justify-content: space-between;
+
+  ${mobile({
+      flexDirection: 'column'
+  })}
 `
 const ProductDetail = styled.div`
   flex: 2;
@@ -63,11 +85,19 @@ const Image = styled.img`
   max-width: 300px;
   width: 100%;
   object-fit: contain;
+
+  ${mobile({
+      maxWidth: '50%'
+  })}
 `
 const Details = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
+  ${mobile({
+      gap: '0.5rem'
+  })}
 `
 const ProductName = styled.span`
   font-weight: 400;
@@ -90,12 +120,22 @@ const PriceDetail = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  ${mobile({
+      flexDirection: 'row',
+      justifyContent: 'space-between'
+
+  })}
 `
 const ProductAmountContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 1.2rem;
+
+  ${mobile({
+    marginBottom: '0'
+  })}
 `
 const ProductAmount = styled.div`
   font-size: 1.5rem;
@@ -117,6 +157,11 @@ const Summary = styled.div`
   padding: 20px;
   margin-left: 20px;
   max-height: 45vh;
+
+  ${mobile({
+      marginLeft: '0',
+      maxHeight: 'none'
+  })}
 `
 const SummaryTitle = styled.h1`
   text-transform: uppercase;
@@ -138,7 +183,7 @@ const SummaryItemPrice = styled.span`
 const Button = styled.button`
   text-transform: uppercase;
   width: 100%;
-  padding: 10px;
+  padding: 1rem;
   outline: none;
   border: none;
   background-color: black;
@@ -152,7 +197,7 @@ const Cart = () => {
   return (
     <CartSection>
       <Container>
-        <Title>Cart</Title>
+        <Title>your bag</Title>
 
         <Top>
           <TopButton>continue shopping</TopButton>
@@ -173,10 +218,10 @@ const Cart = () => {
                 />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> JESSIE THUNDER SHOES
+                    Jerry Thunder Sneakers
                   </ProductName>
                   <ProductId>
-                    <b>Product ID:</b> 548882901123
+                    <b>ID:</b> 548882901123
                   </ProductId>
                   <ProductColor color="red" />
                   <ProductSize>
@@ -204,10 +249,10 @@ const Cart = () => {
                 />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> NEO TEES
+                    Neo Tee
                   </ProductName>
                   <ProductId>
-                    <b>Product ID:</b> 94443290884
+                    <b>ID:</b> 94443290884
                   </ProductId>
                   <ProductColor color="yellow" />
                   <ProductSize>
@@ -235,10 +280,10 @@ const Cart = () => {
                 />
                 <Details>
                   <ProductName>
-                    <b>Product:</b> Fashion Hut Shorts
+                    Fashion Hut Shorts
                   </ProductName>
                   <ProductId>
-                    <b>Product ID:</b> 548836751009
+                    <b>ID:</b> 548836751009
                   </ProductId>
                   <ProductColor color="grey" /> 
                   <ProductSize>

@@ -1,13 +1,15 @@
-import { NavContainer, NavWrapper, Hamburger, Left, Center, Right, Lang, Search, Logo, MenuItem, Cart, Badge } from "./Navbar.styles";
+import { NavContainer, NavWrapper, Hamburger, Left, Center, Right, Lang, Search, Logo, MenuItem, Cart, Badge, Line } from "./Navbar.styles";
 import {AiOutlineSearch, AiOutlineShoppingCart} from 'react-icons/ai';
-import {HiOutlineMenu} from 'react-icons/hi';
+// import {HiOutlineMenu} from 'react-icons/hi';
 
-const Navbar = () => {
+const Navbar = ({openNav, toggleNav}) => {
     return ( 
-        <NavContainer>
+        <NavContainer openNav={openNav}>
             <NavWrapper>
-                <Hamburger>
-                    <HiOutlineMenu size={30}/>
+                <Hamburger onClick={() => toggleNav()} >
+                    <Line openNav={openNav} />
+                    <Line openNav={openNav}/>
+                    <Line openNav={openNav} />
                 </Hamburger>
                 <Left>
                     <Lang>EN</Lang>
@@ -17,7 +19,7 @@ const Navbar = () => {
                     </Search>
                 </Left>
                 <Center>
-                    <Logo>E-Shopify.</Logo>
+                    <Logo>trendy</Logo>
                 </Center>
                 <Right>
                     <MenuItem>Register</MenuItem>
@@ -25,7 +27,7 @@ const Navbar = () => {
                     <MenuItem>
                         <Cart>
                             <Badge>4</Badge>
-                            <AiOutlineShoppingCart size={25}/>
+                            <AiOutlineShoppingCart size={30}/>
                         </Cart>
                     </MenuItem>
                 </Right>

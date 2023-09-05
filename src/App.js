@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Announcement from './components/Announcement';
 import Footer from './components/Footer';
@@ -12,11 +12,17 @@ import Register from './pages/Register';
 import MobileNav from './components/MobileNav';
 
 function App() {
+  const [openNav, setOpenNav] = useState(false);
+
+  const toggleNav = () => {
+    setOpenNav(!openNav)
+  }
+
   return (
     <>
-      <MobileNav />
+      <MobileNav openNav={openNav} toggleNav={toggleNav} />
       <Announcement />
-      <Navbar />
+      <Navbar openNav={openNav} toggleNav={toggleNav}/>
       <Home />
       <Footer />
     </>

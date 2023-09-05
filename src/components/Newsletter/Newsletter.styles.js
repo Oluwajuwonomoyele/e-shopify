@@ -49,7 +49,7 @@ export const InputContainer = styled.div`
     border: 1px solid lightgray;
 
     ${mobile({
-        width: '100%'
+        width: '80%'
     })}
 
 `
