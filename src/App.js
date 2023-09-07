@@ -8,7 +8,7 @@ import Login from './pages/Login';
 import ProductList from './pages/ProductList';
 import Products from './pages/Products';
 import Register from './pages/Register';
-import MobileNav from './components/MobileNav';
+import MobileMenu from './components/MobileNav';
 import Wishlist from './pages/Wishlist';
 
 function App() {
@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <MobileNav openNav={openNav} toggleNav={toggleNav} />
+      <MobileMenu openNav={openNav} toggleNav={toggleNav} />
       <Announcement />
       <Navbar openNav={openNav} toggleNav={toggleNav} toggleCart={toggleCart} openCart={openCart} />
       <Home />

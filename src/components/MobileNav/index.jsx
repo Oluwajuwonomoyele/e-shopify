@@ -1,11 +1,11 @@
-import { MobileNavSection, Container, Buttons, Button, MenuList, ListItem, Search, Input, Categories, Cat, Socials } from "./mobileNav.styles";
+import { MobileNavSection, Container, Buttons, Button, MenuList, ListItem, Search, Input, Categories, Cat, Socials } from "./MobileNav.styles";
 import {AiFillHome,  AiOutlineSearch, AiFillFacebook, AiOutlineInstagram, AiOutlineTwitter} from 'react-icons/ai';
 import {BsTelephoneFill, BsPinterest} from 'react-icons/bs';
 import {BiCurrentLocation} from 'react-icons/bi';
 import {MdOutlineStorefront} from 'react-icons/md';
 import {FaChevronRight} from 'react-icons/fa';
 
-const MobileNav = ({openNav}) => {
+const MobileMenu = ({openNav}) => {
   return (
     <MobileNavSection opennav={openNav}>
         <Container>
@@ -40,4 +40,4 @@ const MobileNav = ({openNav}) => {
   )
 }
 
-export default MobileNav
+export default MobileMenu
