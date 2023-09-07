@@ -1,58 +1,40 @@
-import { FooterSection, Wrapper, Left, Right, Center, Logo, Desc, SocialContainer, SocialIcon, Title, List, ListItem, ContactItem, Payment } from "./Footer.styles";
-import { AiFillFacebook, AiOutlineInstagram, AiOutlineTwitter, AiFillPhone, AiFillMail } from 'react-icons/ai';
+import { FooterSection, Container, First, Second, Third, Buttons, Button, Links } from "./Footer.styles";
+import { AiFillFacebook, AiOutlineInstagram, AiOutlineTwitter, AiFillMail } from 'react-icons/ai';
+import {BsFillChatLeftTextFill} from 'react-icons/bs';
+import {IoMdCall} from 'react-icons/io';
 import { BiLogoPinterest } from 'react-icons/bi'
 import { MdMeetingRoom } from 'react-icons/md'
 
 const Footer = () => {
     return (  
         <FooterSection>
-            <Wrapper>   
-                <Left>
-                    <Logo>E-Shopify.</Logo>
-                    <Desc>There are many variations of passages of Lorem ipsum available, but the majority have suffered altercation in some form, by injected humour, or randomised words which don't look even slightly believable.</Desc>
-                    <SocialContainer>
-                        <SocialIcon>
-                            <AiFillFacebook size={25} color='3B5999' />
-                        </SocialIcon>
-                        <SocialIcon>
-                            <AiOutlineInstagram size={25} color='E4405F' />
-                        </SocialIcon>
-                        <SocialIcon>
-                            <AiOutlineTwitter size={25} color='55ACEE' />
-                        </SocialIcon>
-                        <SocialIcon>
-                            <BiLogoPinterest size={25} color='E60023' />
-                        </SocialIcon>
-                    </SocialContainer>
-                </Left>
-                <Center>
-                    <Title>Useful Links</Title>
-                    <List>
-                        <ListItem>Home</ListItem>
-                        <ListItem>Cart</ListItem>
-                        <ListItem>Men Fashion</ListItem>
-                        <ListItem>Women Fashion</ListItem>
-                        <ListItem>Accessories</ListItem>
-                        <ListItem>My Account</ListItem>
-                        <ListItem>Order Tracking</ListItem>
-                        <ListItem>Wishlist</ListItem>
-                        <ListItem>Terms</ListItem>
-                    </List>
-                </Center>
-                <Right>
-                    <Title>Contact</Title>
-                    <ContactItem>
-                       <MdMeetingRoom /> 523 Cremsworth Av, East Calford 29471
-                    </ContactItem>
-                    <ContactItem>
-                       <AiFillPhone /> +1 234 5678
-                    </ContactItem>
-                    <ContactItem>
-                        <AiFillMail /> contact@juwon.dev
-                    </ContactItem>
-                    <Payment src='https://i.ibb.co/Qfvn4z6/payment.png' alt='Payment Options' />
-                </Right>
-            </Wrapper>
+            <Container>   
+                <First>
+                    <h2>support</h2>
+                    <p>We'd love to engage some good old fashioned conversation. Availble 7 days, 9am-5pm VI</p>
+                    <Buttons>
+                        <Button><BsFillChatLeftTextFill /><span>Start a Chat</span></Button>
+                        <Button><IoMdCall /><span>Call Us</span></Button>
+                        <Button><AiFillMail /><span>Email us</span></Button>
+                    </Buttons>
+                </First>
+
+                <Second>
+                    <Links>
+                        <h2>About</h2>
+
+
+                    </Links>
+
+                    <Links>
+                    </Links>
+
+                </Second>
+
+                <Third>
+
+                </Third>
+            </Container>
         </FooterSection>
     );
 }

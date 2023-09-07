@@ -3,15 +3,13 @@ import {mobile} from '../../responsive';
 
 export const NavContainer = styled.section`
     background: white;
-    height: 60px;
+    height: 70px;
     transition: all 0.5s ease;
-    position: ${(props) => props.openNav ? 'absolute' : ''};
+    position: ${(props) => props.openNav ? 'fixed' : ''};
     width: ${(props) => props.openNav ? '100%' : ''};
     top: ${(props) => props.openNav ? '0' : ''};
     left: ${(props) => props.openNav ? '0' : ''};
     z-index: 30;
-
-
 `
 export const NavWrapper = styled.div`
     max-width: 1400px;
@@ -31,27 +29,27 @@ export const Hamburger = styled.div`
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    gap: 0.4rem;
+    gap: 0.3rem;
 
     @media screen and (min-width: 426px) {
         display: none;
     }
 `
 export const Line = styled.div`
-    width: 1.9rem;
+    width: 1.5rem;
     height: 3px;
     background-color: black;
     border-radius: 5px;
     transition: all 0.3s ease;
 
     &:nth-child(1){
-        transform: ${(props) => props.openNav ? 'rotate(45deg) translateY(0.8rem)' : ''}
+        transform: ${(props) => props.openNav ? 'rotate(48deg) translateY(0.7rem)' : ''}
     }
     &:nth-child(2){
         opacity: ${(props) => props.openNav ? '0' : '1'}
     }
     &:nth-child(3){
-        transform: ${(props) => props.openNav ? 'rotate(-45deg) translateY(-0.8rem)' : ''}
+        transform: ${(props) => props.openNav ? 'rotate(-47deg) translateY(-0.7rem)' : ''}
     }
 `
 export const Left = styled.div`
@@ -92,7 +90,7 @@ export const Center = styled.div`
     flex: 1;
 
     ${mobile({
-      flex: '2'
+      flex: '5'
     })}
 `
 export const Logo = styled.h1`
@@ -110,7 +108,7 @@ export const Right = styled.div`
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 25px;
+    gap: 1rem;
 `
 export const MenuItem = styled.div`
     font-size: 14px;
@@ -128,17 +126,20 @@ export const MenuItem = styled.div`
         })}
     }
 `
-export const Cart = styled.div`
+export const Wish = styled.div`
+    position: relative;
+    cursor: pointer;
+`
+export const SCart = styled.div`
     position: relative;
     cursor: pointer;
 `
 export const Badge = styled.div`
-    background-color: blue;
+    background-color: teal;
     position: absolute;
     padding: 0 5px;
     border-radius: 50%;
     right: -20%;
     top: -20%;
     color: white;
-    display: none;
 `

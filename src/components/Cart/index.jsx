@@ -1,213 +1,15 @@
-import { styled } from 'styled-components';
-import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
-import { mobile } from '../responsive';
-
-const CartSection = styled.section``
-
-const Container = styled.div`
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-
-  ${mobile({
-      padding: '1.5rem'
-  })}
-`
-const Title = styled.h1`
-  font-weight: 300;
-  font-size: 2rem;
-  text-align: center;
-  text-transform: uppercase;
-
-  ${mobile({
-    marginBottom: '1rem'
-  })}
-`
-const Top = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`
-const TopButton = styled.button`
-  text-transform: uppercase;
-  padding: 0.6rem;
-  font-weight: 600;
-  cursor: pointer;
-  outline: none;
-  background-color: ${(props) => (props.type === 'filled' ? 'black' : 'transparent')};
-  color: ${(props) => (props.type === 'filled' ? 'white' : '')};
-`
-const TopTexts = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.6rem;
-
-  ${mobile({
-      display: 'none'
-  })}
-`
-const TopText = styled.span`
-  text-decoration: underline;
-  cursor: pointer;
-`
-const Bottom = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-
-  ${mobile({
-    flexDirection: 'column',
-    gap: '2rem',
-  })}
-`
-const Info = styled.div`
-  flex: 3;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-`
-const Product = styled.div`
-  display: flex;
-  justify-content: space-between;
-
-  ${mobile({
-      flexDirection: 'column'
-  })}
-`
-const ProductDetail = styled.div`
-  flex: 2;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-`
-const Image = styled.img`
-  max-width: 300px;
-  width: 100%;
-  object-fit: contain;
-
-  ${mobile({
-      maxWidth: '50%'
-  })}
-`
-const Details = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-
-  ${mobile({
-      gap: '0.5rem'
-  })}
-`
-const ProductName = styled.span`
-  font-weight: 400;
-  font-size: 1.2rem;
-`
-
-const ProductColor = styled.div`
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background-color: ${(props) => props.color};
-`
-const ProductSize = styled.span``
-
-const ProductId = styled.span``
-
-const PriceDetail = styled.div`
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  ${mobile({
-      flexDirection: 'row',
-      justifyContent: 'space-between'
-
-  })}
-`
-const ProductAmountContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 1.2rem;
-
-  ${mobile({
-    marginBottom: '0'
-  })}
-`
-const ProductAmount = styled.div`
-  font-size: 1.5rem;
-`
-const ProductPrice = styled.div`
-  font-size: 2rem;
-  font-weight: 200;
-`
-
-const Hr = styled.hr`
-  background-color: #eee;
-  border: none;
-  height: 2px;
-`
-const Summary = styled.div`
-  flex: 1;
-  border: 0.5px solid lightgray;
-  border-radius: 10px;
-  padding: 20px;
-  margin-left: 20px;
-  max-height: 45vh;
-
-  ${mobile({
-      marginLeft: '0',
-      maxHeight: 'none'
-  })}
-`
-const SummaryTitle = styled.h1`
-  text-transform: uppercase;
-  font-weight: 500;
-`
-const SummaryItem = styled.div`
-  margin: 30px 0;
-  display: flex;
-  justify-content: space-between;
-  font-weight: ${(props) => props.type === 'total' ? '500': ''};
-  font-size: ${(props) => props.type === 'total' ? '24px': ''};
-`
-const SummaryItemText = styled.span`
-
-`
-const SummaryItemPrice = styled.span`
-
-`
-const Button = styled.button`
-  text-transform: uppercase;
-  width: 100%;
-  padding: 1rem;
-  outline: none;
-  border: none;
-  background-color: black;
-  color: white;
-  cursor: pointer;
-  font-weight: 600;
-`
+import { CartSection, Container, Title, Empty, TopButton } from './Cart.styles';
+import { AiOutlinePlus, AiOutlineMinus, AiOutlineArrowLeft } from 'react-icons/ai';
+import {ImShocked} from 'react-icons/im';
+import {BsBagFill} from 'react-icons/bs';
 
 
-const Cart = () => {
+const Cart = ({openCart, toggleCart}) => {
   return (
-    <CartSection>
+    <CartSection opencart={openCart}>
       <Container>
-        <Title>your bag</Title>
-
-        <Top>
-          <TopButton>continue shopping</TopButton>
-          <TopTexts>
-            <TopText>Shopping Bag(2)</TopText>
-            <TopText>Your Wishlist (0)</TopText>
-          </TopTexts>
-          <TopButton type="filled">checkout</TopButton>
-        </Top>
-
+        <Title><AiOutlineArrowLeft size={22}  onClick={() => toggleCart()}/><span>my shopping cart</span></Title>
+{/* 
         <Bottom>
           <Info>
             <Product>
@@ -321,7 +123,14 @@ const Cart = () => {
             </SummaryItem>
             <Button>checkout now</Button>
           </Summary>
-        </Bottom>
+        </Bottom> */}
+
+        <Empty>
+          <ImShocked size={30} />
+          <h1>Your Cart is Empty</h1>
+          <p>Looks like you haven't found your trend yet</p>
+          <TopButton><span>continue shopping</span> <BsBagFill size={18} /></TopButton>
+        </Empty>
       </Container>
     </CartSection>
   )

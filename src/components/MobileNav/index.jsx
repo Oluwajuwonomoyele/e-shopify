@@ -1,12 +1,13 @@
-import { MobileNavSection, Container, Buttons, Button, MenuList, ListItem, Search, Input } from "./mobileNav.styles";
-import {AiFillHome,  AiOutlineSearch} from 'react-icons/ai';
-import {BsTelephoneFill} from 'react-icons/bs';
+import { MobileNavSection, Container, Buttons, Button, MenuList, ListItem, Search, Input, Categories, Cat, Socials } from "./mobileNav.styles";
+import {AiFillHome,  AiOutlineSearch, AiFillFacebook, AiOutlineInstagram, AiOutlineTwitter} from 'react-icons/ai';
+import {BsTelephoneFill, BsPinterest} from 'react-icons/bs';
 import {BiCurrentLocation} from 'react-icons/bi';
 import {MdOutlineStorefront} from 'react-icons/md';
+import {FaChevronRight} from 'react-icons/fa';
 
 const MobileNav = ({openNav}) => {
   return (
-    <MobileNavSection openNav={openNav}>
+    <MobileNavSection opennav={openNav}>
         <Container>
           <Search>
             <Input type="text" placeholder="Search products..." aria-label="search" />
@@ -18,6 +19,18 @@ const MobileNav = ({openNav}) => {
               <ListItem><BiCurrentLocation size={15} /> <span>Track Order</span></ListItem>
               <ListItem><MdOutlineStorefront size={15} /> <span>Stores</span></ListItem>
           </MenuList>
+          <Categories>
+            <Cat><span>men's</span> <FaChevronRight /></Cat>
+            <Cat><span>women's</span> <FaChevronRight /></Cat>
+            <Cat><span>jewelry</span> <FaChevronRight /></Cat>
+            <Cat><span>electronics</span> <FaChevronRight /></Cat>
+          </Categories>
+          <Socials>
+            <AiFillFacebook />
+            <BsPinterest />
+            <AiOutlineInstagram />
+            <AiOutlineTwitter />
+          </Socials>
           <Buttons>
               <Button>Login</Button>
               <Button>Signup</Button>

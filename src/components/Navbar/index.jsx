@@ -1,10 +1,11 @@
-import { NavContainer, NavWrapper, Hamburger, Left, Center, Right, Lang, Search, Logo, MenuItem, Cart, Badge, Line } from "./Navbar.styles";
-import {AiOutlineSearch, AiOutlineShoppingCart} from 'react-icons/ai';
-// import {HiOutlineMenu} from 'react-icons/hi';
+import { NavContainer, NavWrapper, Hamburger, Left, Center, Right, Lang, Search, Logo, MenuItem, SCart, Badge, Line, Wish } from "./Navbar.styles";
+import {AiOutlineSearch, AiOutlineShoppingCart, AiOutlineHeart} from 'react-icons/ai';
+import Cart from "../Cart";
 
-const Navbar = ({openNav, toggleNav}) => {
+const Navbar = ({openNav, toggleNav, toggleCart, openCart}) => {
     return ( 
         <NavContainer openNav={openNav}>
+            <Cart openCart={openCart} toggleCart={toggleCart}/>
             <NavWrapper>
                 <Hamburger onClick={() => toggleNav()} >
                     <Line openNav={openNav} />
@@ -25,10 +26,16 @@ const Navbar = ({openNav, toggleNav}) => {
                     <MenuItem>Register</MenuItem>
                     <MenuItem>Sign In</MenuItem>
                     <MenuItem>
-                        <Cart>
-                            <Badge>4</Badge>
-                            <AiOutlineShoppingCart size={30}/>
-                        </Cart>
+                        <Wish>
+                            <Badge>0</Badge>
+                            <AiOutlineHeart size={25} />
+                        </Wish>
+                    </MenuItem>
+                    <MenuItem>
+                        <SCart onClick={() => toggleCart()}>
+                            <Badge>0</Badge>
+                            <AiOutlineShoppingCart size={25}/>
+                        </SCart>
                     </MenuItem>
                 </Right>
             </NavWrapper>
