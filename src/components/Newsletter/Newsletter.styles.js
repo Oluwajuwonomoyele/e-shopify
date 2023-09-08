@@ -3,74 +3,56 @@ import {mobile} from '../../responsive'
 
 
 export const NewsletterSection = styled.section`
-    height: 50vh;
-    background-color: #fcf5f5;
+    padding: 0 1.5rem;
 `
 export const Wrapper = styled.div`
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 5rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
-    height: 100%;
-
-    ${mobile({
-        padding: '1rem'
-    })}
-
+    gap: 2rem;
+    border-top: 1px solid teal;
 `
 export const Title = styled.h1`
-    font-size: 3.2rem;
-
-    ${mobile({
-        fontSize: '2.2rem'
-    })}
-
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
 `
 export const Desc = styled.p`
-    font-size: 1.5rem;
     font-weight: 300;
-
-    ${mobile({
-        textAlign: 'center',
-        fontSize: '1.2rem'
-    })}
-
+    text-align: center;
 `
 export const InputContainer = styled.div`
-    width: 50%;
-    height: 40px;
+    width: 90%;
     background-color: white;
     display: flex;
     justify-content: space-between;
-    border: 1px solid lightgray;
-
-    ${mobile({
-        width: '80%'
-    })}
-
+    border: 1px solid teal;
+    padding: 0.5rem 0.4rem ;
+    border-radius: 5px;
 `
 export const Input = styled.input`
-    flex: 9;
     border: none;
-    padding-left: 1rem;
+    font-size: 1rem;
+    padding-left: 0.5rem;
 
-    ${mobile({
-        flex: '8'
-    })}
+    &::placeholder {
+        font-weight: bold;
+    }
+
+    &:focus {
+        border: none;
+        outline: none
+    }
 `
 export const Button = styled.button`
-    flex: 1;
     cursor: pointer;
     border: none;
     outline: none;
     background-color: teal;
     color: white;
-
-    ${mobile({
-        flex: '2'
-    })}
+    padding: 0.5rem 0.7rem;
 `

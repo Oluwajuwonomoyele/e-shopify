@@ -1,20 +1,15 @@
 import { styled } from "styled-components";
-import { mobile } from "../../responsive";
 
 export const SliderSection = styled.section`
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     position: relative;
     overflow: hidden;
-
-    ${mobile({
-        display: 'none'
-    })}
 `
 export const Arrow = styled.div`
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     background-color: #fff7f7;
     border-radius: 50%;
     display: flex;
@@ -28,7 +23,7 @@ export const Arrow = styled.div`
     right: ${props => props.direction === 'right' ? '10px' : ''};
     cursor: pointer;
     opacity: 0.7;
-    z-index: 22;
+    z-index: 15;
 `
 export const Wrapper = styled.div`
     height: 100%;
@@ -38,40 +33,50 @@ export const Wrapper = styled.div`
 `
 export const Slide = styled.div`
     width: 100vw;
-    height: 100vh;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #${props => props.bg};
+    position: relative;
 `
 export const ImageContainer = styled.div`
-    flex: 1;
     height: 100%;
-`
+    position: absolute;
+    width: 100%;
+    height: 80vh;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    `
 export const Image = styled.img`
-    height: 86%;
+    height: 100%;
     width: 100%;
     object-fit: cover;
 `
 export const InfoContainer = styled.div`
-    flex: 1;
-    padding: 50px;
+    padding: 0 1.5rem;
+    margin-top: 18rem;
     text-transform: uppercase;
+    position: relative;
+    z-index: 15;
 `
 export const Title = styled.h1`
-    font-size: 70px;
+    font-size: 3rem;
+    color: white;
 `
 export const Desc = styled.p`
-    margin: 50px 0;
-    font-size: 20px;
-    font-weight: 500;
+    color: white;
+    margin: 1.5rem 0;
     letter-spacing: 3px;
 `
 export const SliderButton = styled.button`
-    padding: 10px;
-    background-color: transparent;
-    font-size: 20px;
+    padding: 0.8rem 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: white;
     cursor: pointer;
     text-transform: uppercase;
     outline: none;
+    color: #363636;
+    border: none;
 `

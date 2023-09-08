@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 import './App.css';
 import Announcement from './components/Announcement';
 import Footer from './components/Footer';
@@ -22,14 +24,29 @@ function App() {
     setOpenCart(!openCart)
   }
 
+  const theme = {
+    colors : {
+      black: '#0f2130', 
+      primary: 'teal'
+    }
+  }
   return (
-    <>
-      <MobileMenu openNav={openNav} toggleNav={toggleNav} />
-      <Announcement />
-      <Navbar openNav={openNav} toggleNav={toggleNav} toggleCart={toggleCart} openCart={openCart} />
-      <Home />
-      <Footer />
-    </>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <MobileMenu openNav={openNav} toggleNav={toggleNav} />
+        <Announcement />
+        <Navbar openNav={openNav} toggleNav={toggleNav} toggleCart={toggleCart} openCart={openCart} />
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/wishlist' element={<Wishlist />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/products' element={<Products />} />
+          <Route path='/productlist' element={<ProductList />} />
+        </Routes>
+        <Footer />
+      </ ThemeProvider>
+    </Router>
   );
 }
 

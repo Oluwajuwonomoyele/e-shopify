@@ -1,6 +1,3 @@
-import summer from './assets/summer.jpg';
-import winter from './assets/winter.jpg';
-import autumn from './assets/autumn.jpg';
 import shirts from './assets/shirts.jpg';
 import lounge from './assets/loungewear.jpg';
 import jackets from './assets/jackets.jpg';
@@ -11,27 +8,24 @@ import sneakers from './assets/sneakers.jpg';
 export const sliderData = [
     {
         id: 1,
-        img: summer,
-        alt: 'lady on blue summer dress',
-        title: 'summer sale',
-        desc: "don't compromise on style! get flat 30% off for new arrivals.",
-        bg: 'f5fafd'
+        img: 'https://images.pexels.com/photos/6633589/pexels-photo-6633589.jpeg?auto=compress&cs=tinysrgb&w=600',
+        alt: 'a man holding a card while usuing his laptop',
+        title: 'brand sales',
+        desc: "don't compromise on your brand! get flat 30% off for new arrivals.",
     },
     {
         id: 2,
-        img: winter,
-        alt: 'lady on brown winter dress',
-        title: 'winter wonder',
-        desc: "don't compromise on style! get flat 30% off for new arrivals.",
-        bg: 'fcf1ed'
+        img: 'https://images.pexels.com/photos/3812433/pexels-photo-3812433.jpeg?auto=compress&cs=tinysrgb&w=600',
+        alt: 'clothes on hangers',
+        title: 'get extra 10% off',
+        desc: "pick your style! get 10% off for your first purchase.",
     },
     {
         id: 3,
-        img: autumn,
-        alt: 'lady on white autumn dress',
-        title: 'autumn collection',
-        desc: "don't compromise on style! get flat 30% off for new arrivals.",
-        bg: 'f79762'
+        img: 'https://images.pexels.com/photos/10873680/pexels-photo-10873680.jpeg?auto=compress&cs=tinysrgb&w=600',
+        alt: 'a lady with jewelries',
+        title: "we've got you!",
+        desc: "shop with us today.",
     },
 ]
 

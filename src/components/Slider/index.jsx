@@ -17,14 +17,16 @@ const Slider = () => {
     return (  
         <SliderSection>
             <Arrow direction='left' onClick={() => nextSlide('left')} >
-                <AiOutlineArrowLeft size={25} />
+                <AiOutlineArrowLeft size={22} />
             </Arrow>
+
             <Wrapper slideindex={slideIndex}>
                 { sliderData.map(slide => (
-                    <Slide bg={slide.bg} key={slide.id}>
+                    <Slide key={slide.id}>
                         <ImageContainer>
                             <Image src={slide.img} alt={slide.alt} />
                         </ImageContainer>
+
                         <InfoContainer>
                             <Title>{slide.title}</Title>
                             <Desc>{slide.desc}</Desc>
@@ -34,7 +36,7 @@ const Slider = () => {
                 ))}
             </Wrapper>
             <Arrow direction='right' onClick={() => nextSlide('right')}>
-                <AiOutlineArrowRight size={25} />
+                <AiOutlineArrowRight size={22} />
             </Arrow>
         </SliderSection>
     );

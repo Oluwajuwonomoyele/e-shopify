@@ -1,34 +1,32 @@
 import { styled } from "styled-components";
 import {mobile} from '../../responsive';
+import { Link } from "react-router-dom";
 
 export const NavContainer = styled.section`
     background: white;
-    height: 70px;
+    height: 5rem;
     transition: all 0.5s ease;
     position: ${(props) => props.openNav ? 'fixed' : ''};
     width: ${(props) => props.openNav ? '100%' : ''};
     top: ${(props) => props.openNav ? '0' : ''};
     left: ${(props) => props.openNav ? '0' : ''};
     z-index: 30;
+    border-bottom: 1px solid teal;
 `
 export const NavWrapper = styled.div`
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 0 1.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
-
-    ${mobile({
-        padding: '0 1.5rem'
-    })}
 `
 export const Hamburger = styled.div`
-    flex: 1;
     cursor: pointer;
     display: flex;
     flex-direction: column;
+    flex-basis: 10%;
     gap: 0.3rem;
 
     @media screen and (min-width: 426px) {
@@ -38,7 +36,7 @@ export const Hamburger = styled.div`
 export const Line = styled.div`
     width: 1.5rem;
     height: 3px;
-    background-color: black;
+    background-color: ${({theme}) => theme.colors.black};
     border-radius: 5px;
     transition: all 0.3s ease;
 
@@ -87,33 +85,29 @@ export const Search = styled.div`
     })}
 `
 export const Center = styled.div`
-    flex: 1;
 
-    ${mobile({
-      flex: '5'
-    })}
 `
-export const Logo = styled.h1`
+export const Logo = styled(Link)`
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     cursor: pointer;
-
-    ${mobile({
-        fontSize: '22px',
-    })}
+    font-size: 2rem;
+    letter-spacing: 4px;
+    text-decoration: none;
+    color: ${({theme}) => theme.colors.black}
 `
 export const Right = styled.div`
-    flex: 1;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 1rem;
+    gap: 0.5rem;
 `
 export const MenuItem = styled.div`
     font-size: 14px;
     cursor: pointer;
     text-transform: uppercase;
+    position: relative;
 
     &:nth-child(1){
         ${mobile({
@@ -126,13 +120,19 @@ export const MenuItem = styled.div`
         })}
     }
 `
-export const Wish = styled.div`
-    position: relative;
+export const Wish = styled(Link)`
     cursor: pointer;
+
+    path {
+        color: ${({theme}) => theme.colors.black};
+    }
 `
 export const SCart = styled.div`
-    position: relative;
     cursor: pointer;
+
+    path {
+        color: ${({theme}) => theme.colors.black};
+    }
 `
 export const Badge = styled.div`
     background-color: teal;

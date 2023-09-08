@@ -1,9 +1,8 @@
-import { FooterSection, Container, First, Second, Third, Buttons, Button, Links } from "./Footer.styles";
-import { AiFillFacebook, AiOutlineInstagram, AiOutlineTwitter, AiFillMail } from 'react-icons/ai';
+import { FooterSection, Container, First, Second, Third, Buttons, Button, Links, Left, Right, SocialContainer, Cr, Acknowledgment } from "./Footer.styles";
+import { AiOutlineInstagram, AiOutlineTwitter, AiFillMail, AiOutlineFacebook, AiOutlineLinkedin } from 'react-icons/ai';
 import {BsFillChatLeftTextFill} from 'react-icons/bs';
 import {IoMdCall} from 'react-icons/io';
-import { BiLogoPinterest } from 'react-icons/bi'
-import { MdMeetingRoom } from 'react-icons/md'
+import { FaPinterestP } from 'react-icons/fa';
 
 const Footer = () => {
     return (  
@@ -20,21 +19,49 @@ const Footer = () => {
                 </First>
 
                 <Second>
-                    <Links>
+                    <Left>
                         <h2>About</h2>
 
+                        <Links>
+                            <p>my account</p>
+                            <p>shop</p>
+                            <p>privacy policy</p>
+                            <p>downloads</p>
+                            
+                        </Links>
+                    </Left>
 
-                    </Links>
+                    <Right>
+                        <h2>Help</h2>
 
-                    <Links>
-                    </Links>
-
+                        <Links>
+                            <p>order status</p>
+                            <p>shipping &amp; delivery</p>
+                            <p>track order</p>
+                            <p>FAQs</p>
+                        </Links>
+                    </Right>
                 </Second>
 
                 <Third>
-
+                    <h2>the common club</h2>
+                    <p>With each purchase, you’ll earn a credit you can use to save on your next shirt, chinos, denim, or outerwear. Look out for special offers to earn extra points.</p>
+                    <button>log in</button>
                 </Third>
+
+                <SocialContainer>
+                    <AiOutlineInstagram />
+                    <AiOutlineTwitter />
+                    <AiOutlineFacebook />
+                    <FaPinterestP />
+                    <AiOutlineLinkedin />
+                </SocialContainer>
+
+                <Cr>
+                    &copy; 2023, Trendy Inc.
+                </Cr>
             </Container>
+            <Acknowledgment>Designed and Developed by <a href="#">Olutomisin Oluwajuwon</a></Acknowledgment>
         </FooterSection>
     );
 }

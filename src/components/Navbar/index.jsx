@@ -20,13 +20,13 @@ const Navbar = ({openNav, toggleNav, toggleCart, openCart}) => {
                     </Search>
                 </Left>
                 <Center>
-                    <Logo>trendy</Logo>
+                    <Logo to='/'>trendy</Logo>
                 </Center>
                 <Right>
                     <MenuItem>Register</MenuItem>
                     <MenuItem>Sign In</MenuItem>
                     <MenuItem>
-                        <Wish>
+                        <Wish to='/wishlist'>
                             <Badge>0</Badge>
                             <AiOutlineHeart size={25} />
                         </Wish>
