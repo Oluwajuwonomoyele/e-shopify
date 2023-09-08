@@ -5,10 +5,10 @@ const Newsletter = () => {
     return (  
         <NewsletterSection>
             <Wrapper>
-                <Title>trendy</Title>
-                <Desc>Sign up to receive 20% off your first purchase.</Desc>
+                <Title>Subscribe to Our Newsletters</Title>
+                <Desc>To stay up-to-date with our new arrivals and coupon giveways.</Desc>
                 <InputContainer>
-                    <Input placeholder="Your Email" type="email" aria-label="email" />
+                    <Input placeholder="Enter your email" type="email" aria-label="email" />
                     <Button>
                         <MdSend size={22} />
                     </Button>

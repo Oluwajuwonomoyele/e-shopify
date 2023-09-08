@@ -1,6 +1,4 @@
-import shirts from './assets/shirts.jpg';
 import lounge from './assets/loungewear.jpg';
-import jackets from './assets/jackets.jpg';
 import jeans from './assets/jeans.jpg';
 import beach from './assets/beach.jpg';
 import sneakers from './assets/sneakers.jpg';
@@ -32,19 +30,28 @@ export const sliderData = [
 export const categories = [
     {
         id: 1,
-        img: shirts,
-        title: 'shirt style'
+        img: 'https://images.pexels.com/photos/1450116/pexels-photo-1450116.jpeg?auto=compress&cs=tinysrgb&w=600',
+        title: "men's fashion",
+        alt: "men's clothings"
     },
     {
         id: 2,
         img: lounge,
-        title: 'loungewear love'
+        title: "women's fashion",
+        alt: "women's clothes"
     },
     {
         id: 3,
-        img: jackets,
-        title: 'light jackets'
+        img: 'https://images.pexels.com/photos/2735970/pexels-photo-2735970.jpeg?auto=compress&cs=tinysrgb&w=600',
+        title: 'jewelries',
+        alt: "jewelries"
     },
+    {
+        id: 4,
+        img: 'https://images.pexels.com/photos/3521937/pexels-photo-3521937.jpeg?auto=compress&cs=tinysrgb&w=600',
+        title: 'electronics',
+        alt: "electronics"
+    }
 ]
 
 export const popularProducts = [
@@ -72,20 +79,5 @@ export const popularProducts = [
         id: 5,
         img:"https://images.ctfassets.net/5gvckmvm9289/3BlDoZxSSjqAvv1jBJP7TH/65f9a95484117730ace42abf64e89572/Noissue-x-Creatsy-Tote-Bag-Mockup-Bundle-_4_-2.png",
         alt: 'tote bag'
-    },
-    {
-        id:6,
-        img:"https://ng.jumia.is/unsafe/fit-in/500x500/filters:fill(white)/product/32/081986/1.jpg?1601",
-        alt: 'face cap'
-    },
-    {
-        id:7,
-        img: sneakers,
-        alt: 'sneakers'
-    },
-    {
-        id:8,
-        img:"https://www.pngarts.com/files/3/Women-Jacket-PNG-High-Quality-Image.png",
-        alt: 'rain coat'
     }
 ]

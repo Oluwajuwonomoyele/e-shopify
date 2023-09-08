@@ -1,12 +1,12 @@
-import { CatItemContainer, Image, Info, Title, Button } from "./cats.styles";
+import { CatItemContainer, Image, Info, CatTitle, Button } from "./cats.styles";
 
 
 const CatItem = ({cat}) => {
     return ( 
         <CatItemContainer>
-            <Image src={cat.img} />
+            <Image src={cat.img} alt={cat.alt} />
             <Info>
-                <Title>{cat.title}</Title>
+                <CatTitle>{cat.title}</CatTitle>
                 <Button>shop now</Button>
             </Info>
         </CatItemContainer>

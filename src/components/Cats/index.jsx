@@ -1,16 +1,20 @@
-import { CatsSection, CatsContainer } from "./cats.styles";
+import { CatsSection, Container, Title, CatContainer } from "./cats.styles";
 import { categories } from "../../data";
 import CatItem from "./catitem";
 
 const Cats = () => {
     return ( 
-        <CatsContainer>
-           <CatsSection>
-            { categories.map(cat => (
-                    <CatItem cat={cat} key={cat.id} />
-            ))}
-           </CatsSection>
-        </CatsContainer>
+        <CatsSection>
+           <Container>
+            <Title>Shop by Category</Title>
+
+            <CatContainer>
+                { categories.map(cat => (
+                        <CatItem cat={cat} key={cat.id} />
+                ))}
+            </CatContainer>
+           </Container>
+        </CatsSection>
     );
 }
  

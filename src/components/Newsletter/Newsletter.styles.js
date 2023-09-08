@@ -17,27 +17,30 @@ export const Wrapper = styled.div`
     border-top: 1px solid teal;
 `
 export const Title = styled.h1`
-    font-size: 2.4rem;
+    font-size: 2rem;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 4px;
+    color: ${({theme}) => theme.colors.black};
 `
 export const Desc = styled.p`
     font-weight: 300;
     text-align: center;
+    color: ${({theme}) => theme.colors.black};
 `
 export const InputContainer = styled.div`
-    width: 90%;
+    width: 95%;
     background-color: white;
     display: flex;
     justify-content: space-between;
-    border: 1px solid teal;
-    padding: 0.5rem 0.4rem ;
+    border: 2px solid teal;
+    padding: 0.4rem 1rem;
     border-radius: 5px;
 `
 export const Input = styled.input`
     border: none;
     font-size: 1rem;
-    padding-left: 0.5rem;
+    color: ${({theme}) => theme.colors.black};
 
     &::placeholder {
         font-weight: bold;

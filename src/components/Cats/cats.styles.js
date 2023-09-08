@@ -1,35 +1,35 @@
 import { styled } from "styled-components";
-import {mobile} from '../../responsive';
 
-export const CatsContainer = styled.section`
+export const CatsSection = styled.section`
 `
-export const CatsSection = styled.div`
+export const Container = styled.div`
     max-width: 1400px;
     margin: 0 auto;
-    padding: 1rem 2rem;
+    padding: 1.5rem;
+`
+export const Title = styled.h1`
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    text-align: center;
+`
+export const CatContainer = styled.div`
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: center;
     gap: 1rem;
-
-    ${mobile({
-        padding: '1rem',
-        flexDirection: 'column'
-    })}
+    flex-wrap: wrap;
 `
 
 export const CatItemContainer = styled.div`
-    flex: 1;
-    height: 75vh;
+    height: 500px;
+    width: 47%;
     position: relative;
+    overflow: hidden;
 `
 export const Image = styled.img`
     width: 100%;
     height: 100%;
     object-fit: cover;
-
-    ${mobile({
-        height: '40vh'
-    })}
 `
 export const Info = styled.div`
     position: absolute;
@@ -38,26 +38,26 @@ export const Info = styled.div`
     top: 0;
     left: 0;
     display: flex;
+    padding: 0 0.5rem;
     gap: 1.5rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 `
-export const Title = styled.h1`
+export const CatTitle = styled.h1`
+    margin-top: 18rem;
     color: white;
-    text-transform: uppercase;
-    font-size: 35px;
-
-    ${mobile({
-        textAlign: 'center'
-    })}
+    text-transform: capitalize;
+    font-size: 1.3rem;
+    text-align: center;
 `
 export const Button = styled.button`
-    border: none;
-    padding: 10px;
+    padding: 0.6rem 1rem;
     background-color: white;
-    color: gray;
+    color: ${({theme}) => theme.colors.black};
     text-transform: uppercase;
     outline: none;
-    font-weight: 600;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
 `

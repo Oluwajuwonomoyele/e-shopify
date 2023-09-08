@@ -27,7 +27,9 @@ function App() {
   const theme = {
     colors : {
       black: '#0f2130', 
-      primary: 'teal'
+      primary: 'teal',
+      brown: '#4e4537',
+      grey: '#535348'
     }
   }
   return (

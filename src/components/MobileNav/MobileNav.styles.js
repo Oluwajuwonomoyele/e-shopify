@@ -14,14 +14,14 @@ export const MobileNavSection = styled.section`
 `
 export const Container = styled.div`
     padding: 1.5rem;
-    padding-top: 5rem;
+    padding-top: 6rem;
     margin-bottom: 1.5rem;
     height: 100%;
 `
 export const Search = styled.div`
     width: 100%;
     background-color: white;
-    padding: 0.8rem 1rem ;
+    padding: 1rem ;
     display: flex;
     align-items: center;
     justify-content: space-between;

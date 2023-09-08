@@ -1,21 +1,27 @@
-import { ProductItemContainer, Circle, Image, InfoContainer, Icon } from "./Product.styles";
+import { ProductItemContainer, Image, InfoContainer, Desc, Top, Bottom, Name, Stock, Price} from "./Product.styles";
 import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai';
 
 const ProductItem = ({product}) => {
     return (  
         <ProductItemContainer>
-            <Circle />
             <Image src={product.img} alt={product.alt}/>
             <InfoContainer>
-                <Icon>
-                    <AiOutlineShoppingCart size={22} />
-                </Icon>
-                <Icon>
-                    <AiOutlineSearch size={22} />
-                </Icon>
-                <Icon>
-                    <AiOutlineHeart size={22} />
-                </Icon>
+                <Top>
+                    <Name>Lorem Ipsum</Name>
+                    <Stock>In Stock</Stock>
+                </Top>
+
+                <Desc>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ex voluptates quae verit</Desc>
+
+                <Bottom>
+                    <Price>
+                        NGN  35000.00
+                    </Price>
+                    <div>
+                        <AiOutlineHeart size={30} />
+                        <AiOutlineShoppingCart size={30} />
+                    </div>
+                </Bottom>
             </InfoContainer>
         </ProductItemContainer>
     );
