@@ -1,7 +1,6 @@
 import lounge from './assets/loungewear.jpg';
 import jeans from './assets/jeans.jpg';
 import beach from './assets/beach.jpg';
-import sneakers from './assets/sneakers.jpg';
 
 export const sliderData = [
     {

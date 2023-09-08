@@ -1,10 +1,23 @@
 import { NavContainer, NavWrapper, Hamburger, Left, Center, Right, Lang, Search, Logo, MenuItem, SCart, Badge, Line, Wish } from "./Navbar.styles";
 import {AiOutlineSearch, AiOutlineShoppingCart, AiOutlineHeart} from 'react-icons/ai';
 import Cart from "../Cart";
+import { useState } from "react";
 
 const Navbar = ({openNav, toggleNav, toggleCart, openCart}) => {
+    const [navPosition, setNavPosition] = useState(false);
+
+    const changeNavPosition = () => {
+        if(window.scrollY >= 80){
+            setNavPosition(true)
+        }else {
+            setNavPosition(false)
+        }
+    }
+
+    window.addEventListener('scroll', changeNavPosition)
+
     return ( 
-        <NavContainer openNav={openNav}>
+        <NavContainer openNav={openNav} navPosition={navPosition}>
             <Cart openCart={openCart} toggleCart={toggleCart}/>
             <NavWrapper>
                 <Hamburger onClick={() => toggleNav()} >

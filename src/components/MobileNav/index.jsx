@@ -32,8 +32,8 @@ const MobileMenu = ({openNav}) => {
             <AiOutlineTwitter />
           </Socials>
           <Buttons>
-              <Button>Login</Button>
-              <Button>Signup</Button>
+              <Button to='/login'>Login</Button>
+              <Button to='/register'>Signup</Button>
           </Buttons>
         </Container>
     </MobileNavSection>

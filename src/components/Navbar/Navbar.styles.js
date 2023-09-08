@@ -6,10 +6,10 @@ export const NavContainer = styled.section`
     background: white;
     height: 5rem;
     transition: all 0.5s ease;
-    position: ${(props) => props.openNav ? 'fixed' : ''};
-    width: ${(props) => props.openNav ? '100%' : ''};
-    top: ${(props) => props.openNav ? '0' : ''};
-    left: ${(props) => props.openNav ? '0' : ''};
+    position: ${(props) => props.openNav || props.navPosition ? 'fixed'  : props.openNav && props.navPosition ? 'fixed' : ''};
+    width: 100%;
+    top: ${(props) => props.openNav || props.navPosition ? '0'  : props.openNav && props.navPosition ? '0': ''};
+    left: ${(props) => props.openNav || props.navPosition ? '0'  : props.openNav && props.navPosition ? '0' : ''};
     z-index: 30;
     border-bottom: 1px solid teal;
 `
@@ -95,7 +95,7 @@ export const Logo = styled(Link)`
     font-size: 2rem;
     letter-spacing: 4px;
     text-decoration: none;
-    color: ${({theme}) => theme.colors.black}
+    color: ${({theme}) => theme.colors.brown}
 `
 export const Right = styled.div`
     display: flex;

@@ -1,4 +1,5 @@
 import {styled} from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
 export const MobileNavSection = styled.section`
@@ -64,7 +65,7 @@ export const Buttons = styled.div`
     justify-content: space-between;
     padding-top: 2rem;
 `
-export const Button = styled.button`
+export const Button = styled(Link)`
     padding: 1rem 3rem;
     text-transform: uppercase;
     background-color: white;
@@ -74,6 +75,7 @@ export const Button = styled.button`
     font-weight: 600;
     border-radius: 4px;
     background-color: white;
+    text-decoration: none;
 `
 export const MenuList = styled.div`
     padding: 1rem 0;
