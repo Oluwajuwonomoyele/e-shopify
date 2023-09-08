@@ -1,5 +1,5 @@
 import { ProductItemContainer, Image, InfoContainer, Desc, Top, Bottom, Name, Stock, Price} from "./Product.styles";
-import { AiOutlineSearch, AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai';
+import { AiOutlineHeart, AiOutlineShoppingCart } from 'react-icons/ai';
 
 const ProductItem = ({product}) => {
     return (  
@@ -17,6 +17,7 @@ const ProductItem = ({product}) => {
                     <Price>
                         NGN  35000.00
                     </Price>
+
                     <div>
                         <AiOutlineHeart size={30} />
                         <AiOutlineShoppingCart size={30} />
